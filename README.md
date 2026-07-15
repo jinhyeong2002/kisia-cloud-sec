@@ -1,3 +1,3 @@
 # kisia-cloud-sec
-kiwis cloud -sec
+kisia cloud -sec
 # DevSecOps Lab
