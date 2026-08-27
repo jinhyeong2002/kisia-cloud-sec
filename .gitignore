@@ -1,0 +1,5 @@
+.DS_Store
+
+# Private keys / signing keys
+*.pem
+*.key

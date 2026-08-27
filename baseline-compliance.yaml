@@ -1,0 +1,25 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: baseline-compliance 
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      app: baseline-compliance 
+  template: 
+    metadata: 
+      labels: 
+        app: baseline-compliance 
+    spec: 
+      securityContext: 
+        runAsNonRoot: true 
+      containers: 
+      - name: nginx 
+        image: nginxinc/nginx-unprivileged:stable-alpine 
+        ports: 
+        - containerPort: 8080 
+        securityContext: 
+          capabilities: 
+            drop: 
+            - ALL 
